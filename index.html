@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>على الطاولة · سياسة الخصوصية</title>
+<meta name="description" content="سياسة الخصوصية لتطبيق على الطاولة: لا نجمع أي بيانات. Ala AlTawla privacy policy: we collect no data.">
+<style>
+  :root {
+    --bg:#ECE7DF; --paper:#F5F2EC; --ink:#1F1F1D; --muted:#615B53; --line:#D6CEC1;
+    --olive:#4A5141; --terra:#AD4F35; --night:#1C1C1B; --on-card:#F1ECE4; --ok:#4A5141; --promise:#1C1C1B;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#1C1C1B; --paper:#262624; --ink:#ECE7DF; --muted:#B5AEA3; --line:#3A3936; --ok:#9BAA86; --promise:#4A5141;
+    }
+  }
+  :root[data-theme="dark"] { --bg:#1C1C1B; --paper:#262624; --ink:#ECE7DF; --muted:#B5AEA3; --line:#3A3936; --ok:#9BAA86; --promise:#4A5141; }
+
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--ink); line-height:1.8;
+         font-family: system-ui, -apple-system, "SF Arabic", "Segoe UI", Tahoma, "Noto Sans Arabic", sans-serif; }
+  [lang="en"] body, body.en { line-height:1.7; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 16px; }
+
+  /* top bar */
+  .bar { position:sticky; top:0; z-index:5; background:color-mix(in srgb, var(--bg) 88%, transparent);
+         backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  .bar .wrap { display:flex; align-items:center; gap:12px; height:60px; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:17px; }
+  .spacer { flex:1; }
+  .toggle { display:flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:var(--paper); }
+  .toggle button { border:0; background:none; color:var(--ink); font:inherit; font-size:14px; font-weight:600;
+                   padding:6px 14px; cursor:pointer; min-height:36px; }
+  .toggle button[aria-pressed="true"] { background:var(--ink); color:var(--bg); }
+
+  /* hero */
+  .hero { padding:56px 0 32px; text-align:center; }
+  .cards { position:relative; width:150px; height:120px; margin:0 auto 24px; }
+  .card { position:absolute; top:6px; width:74px; height:104px; border-radius:14px; display:grid; place-items:center;
+          box-shadow:0 12px 24px rgba(0,0,0,.18), 0 2px 4px rgba(0,0,0,.08); }
+  .card svg { width:30px; height:30px; fill:var(--on-card); }
+  .card.t { background:var(--olive); left:22px; transform:rotate(-9deg); z-index:2; }
+  .card.d { background:var(--terra); right:22px; transform:rotate(10deg); }
+  .eyebrow { display:inline-block; font-size:13px; font-weight:700; color:var(--muted); border:1px solid var(--line);
+             border-radius:999px; padding:2px 12px; margin-bottom:14px; }
+  h1 { font-size:clamp(30px, 6vw, 44px); line-height:1.25; margin:0 0 10px; font-weight:800; }
+  .lead { font-size:18px; color:var(--muted); max-width:560px; margin:0 auto; }
+  .updated { font-size:14px; color:var(--muted); margin-top:14px; }
+
+  /* big promise */
+  .promise { background:var(--promise); color:#ECE7DF; border-radius:24px; padding:28px; margin:8px 0 28px;
+             display:flex; gap:20px; align-items:center; }
+  .promise .zero { font-size:64px; font-weight:800; line-height:1; color:#ECE7DF; }
+  .promise p { margin:0; font-size:17px; }
+  .promise strong { font-size:20px; display:block; margin-bottom:4px; }
+
+  /* at a glance */
+  .glance { display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:12px; margin-bottom:40px; }
+  .chip { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:16px; }
+  .chip .ic { width:36px; height:36px; border-radius:50%; display:grid; place-items:center; margin-bottom:8px;
+              background:color-mix(in srgb, var(--ok) 16%, transparent); }
+  .chip .ic svg { width:20px; height:20px; stroke:var(--ok); fill:none; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
+  .chip b { display:block; font-size:16px; }
+  .chip span { font-size:14px; color:var(--muted); }
+
+  /* table of contents */
+  .toc { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:18px 22px; margin-bottom:40px; }
+  .toc h2 { font-size:15px; margin:0 0 8px; color:var(--muted); }
+  .toc ol { margin:0; padding-inline-start:22px; columns:2; column-gap:28px; }
+  .toc a { color:var(--ink); text-decoration:none; }
+  .toc a:hover { text-decoration:underline; }
+  @media (max-width:560px) { .toc ol { columns:1; } .promise { flex-direction:column; text-align:center; } }
+
+  /* sections */
+  section.s { padding:8px 0 28px; border-bottom:1px solid var(--line); margin-bottom:28px; scroll-margin-top:76px; }
+  section.s:last-of-type { border-bottom:0; }
+  .num { display:inline-grid; place-items:center; width:30px; height:30px; border-radius:50%; font-size:14px; font-weight:800;
+         color:var(--on-card); background:var(--olive); margin-inline-end:10px; vertical-align:middle; }
+  section.s:nth-of-type(even) .num { background:var(--terra); }
+  h2.h { display:flex; align-items:center; font-size:22px; margin:0 0 12px; }
+  p { margin:0 0 12px; }
+  ul.clean { margin:0 0 12px; padding-inline-start:20px; }
+  ul.clean li { margin-bottom:6px; }
+
+  table { width:100%; border-collapse:collapse; font-size:15px; background:var(--paper); border-radius:14px; overflow:hidden;
+          border:1px solid var(--line); margin:8px 0 12px; }
+  th, td { padding:12px 14px; text-align:start; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:13px; color:var(--muted); font-weight:700; background:color-mix(in srgb, var(--line) 35%, transparent); }
+  tr:last-child td { border-bottom:0; }
+  .tag { display:inline-block; font-size:12px; font-weight:700; padding:2px 10px; border-radius:999px; white-space:nowrap; }
+  .tag.no { background:color-mix(in srgb, var(--ok) 18%, transparent); color:var(--ok); }
+  .tag.dev { background:color-mix(in srgb, var(--terra) 16%, transparent); color:var(--terra); }
+
+  .note { background:var(--paper); border-inline-start:4px solid var(--terra); border-radius:12px; padding:14px 16px; font-size:15px; }
+  .contact { background:var(--ink); color:var(--bg); border-radius:24px; padding:28px; text-align:center; margin:12px 0 0; }
+  .contact a { color:var(--bg); font-weight:700; font-size:18px; }
+  footer { text-align:center; color:var(--muted); font-size:13px; padding:40px 0 56px; }
+
+  /* language switching */
+  body.ar [lang="en"], body.en [lang="ar"] { display:none !important; }
+</style>
+</head>
+<body class="ar">
+
+<header class="bar">
+  <div class="wrap">
+    <div class="brand"><span lang="ar">على الطاولة</span><span lang="en">Ala AlTawla</span></div>
+    <div class="spacer"></div>
+    <div class="toggle" role="group" aria-label="Language">
+      <button type="button" data-lang="ar" aria-pressed="true">العربية</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div class="cards" aria-hidden="true">
+      <div class="card t"><svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.4 1.3 4.5 3.4 6L4.5 21l4.6-2.4c.9.3 1.9.4 2.9.4 5.5 0 10-3.6 10-8s-4.5-8-10-8Z"/></svg></div>
+      <div class="card d"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
+    </div>
+    <span class="eyebrow"><span lang="ar">سياسة الخصوصية</span><span lang="en">Privacy Policy</span></span>
+    <h1>
+      <span lang="ar">أسراركم تبقى على الطاولة</span>
+      <span lang="en">What's said at the table stays at the table</span>
+    </h1>
+    <p class="lead">
+      <span lang="ar">صمّمنا «على الطاولة» عشان يشتغل كامل على جهازك، بدون إنترنت، وبدون ما نعرف عنكم أي شيء.</span>
+      <span lang="en">Ala AlTawla is built to run entirely on your device, offline, without us learning anything about you.</span>
+    </p>
+    <p class="updated">
+      <span lang="ar">آخر تحديث: ٤ أكتوبر ٢٠٢٦ · ساري من الإصدار 1.0.0</span>
+      <span lang="en">Last updated: 4 October 2026 · Applies from version 1.0.0</span>
+    </p>
+  </div>
+
+  <div class="promise">
+    <div class="zero">0</div>
+    <p>
+      <strong lang="ar">صفر بيانات تطلع من جهازك</strong>
+      <strong lang="en">Zero data leaves your device</strong>
+      <span lang="ar">اللعب كله يشتغل بدون إنترنت، وما عندنا أي سيرفر يستقبل بياناتكم. الاتصال الوحيد هو متجر أبل أو قوقل لما تشتري الباقات الخاصة.</span>
+      <span lang="en">Gameplay is fully offline and we have no server that receives your data. The only connection is Apple's or Google's store when you buy the private packs.</span>
+    </p>
+  </div>
+
+  <div class="glance">
+    <div class="chip"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div>
+      <b lang="ar">بدون حسابات</b><b lang="en">No accounts</b>
+      <span lang="ar">لا تسجيل ولا إيميل ولا رقم جوال</span><span lang="en">No sign-up, email or phone number</span></div>
+    <div class="chip"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div>
+      <b lang="ar">بدون إعلانات</b><b lang="en">No ads</b>
+      <span lang="ar">ولا أي مكتبة إعلانية</span><span lang="en">No advertising SDKs at all</span></div>
+    <div class="chip"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div>
+      <b lang="ar">بدون تتبّع</b><b lang="en">No tracking</b>
+      <span lang="ar">لا تحليلات ولا معرّفات إعلانية</span><span lang="en">No analytics, no ad identifiers</span></div>
+    <div class="chip"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div>
+      <b lang="ar">بدون أذونات حساسة</b><b lang="en">No sensitive permissions</b>
+      <span lang="ar">لا موقع ولا كاميرا ولا جهات اتصال</span><span lang="en">No location, camera or contacts</span></div>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <h2><span lang="ar">المحتويات</span><span lang="en">Contents</span></h2>
+    <ol>
+      <li><a href="#stored"><span lang="ar">وش ينحفظ في جهازك</span><span lang="en">What's stored on your device</span></a></li>
+      <li><a href="#never"><span lang="ar">وش ما نجمعه أبدًا</span><span lang="en">What we never collect</span></a></li>
+      <li><a href="#perms"><span lang="ar">أذونات الجهاز</span><span lang="en">Device permissions</span></a></li>
+      <li><a href="#third"><span lang="ar">الأطراف الثالثة</span><span lang="en">Third parties</span></a></li>
+      <li><a href="#purchases"><span lang="ar">المشتريات داخل التطبيق</span><span lang="en">In-app purchases</span></a></li>
+      <li><a href="#stores"><span lang="ar">متاجر التطبيقات</span><span lang="en">App stores</span></a></li>
+      <li><a href="#kids"><span lang="ar">الأطفال</span><span lang="en">Children</span></a></li>
+      <li><a href="#control"><span lang="ar">تحكّمك في بياناتك</span><span lang="en">Your control & rights</span></a></li>
+      <li><a href="#security"><span lang="ar">الأمان</span><span lang="en">Security</span></a></li>
+      <li><a href="#changes"><span lang="ar">التعديلات على السياسة</span><span lang="en">Changes to this policy</span></a></li>
+      <li><a href="#contact"><span lang="ar">تواصل معنا</span><span lang="en">Contact us</span></a></li>
+    </ol>
+  </nav>
+
+  <section class="s" id="stored">
+    <h2 class="h"><span class="num">1</span><span lang="ar">وش ينحفظ في جهازك</span><span lang="en">What's stored on your device</span></h2>
+    <p lang="ar">عشان ما تكتبون أسماءكم كل مرة، التطبيق يحفظ هذي الأشياء <b>في ذاكرة جهازك فقط</b>:</p>
+    <p lang="en">So you don't have to retype everything each time, the app saves the following <b>in your device's local storage only</b>:</p>
+    <table>
+      <thead><tr>
+        <th><span lang="ar">البيان</span><span lang="en">Item</span></th>
+        <th><span lang="ar">ليش</span><span lang="en">Why</span></th>
+        <th><span lang="ar">وين</span><span lang="en">Where</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span lang="ar">أسماء اللاعبين</span><span lang="en">Player names</span></td>
+            <td><span lang="ar">عشان تبقى المجموعة جاهزة للجمعة الجاية</span><span lang="en">So your group is ready for next time</span></td>
+            <td><span class="tag dev"><span lang="ar">جهازك فقط</span><span lang="en">Device only</span></span></td></tr>
+        <tr><td><span lang="ar">الباقات المختارة</span><span lang="en">Selected packs</span></td>
+            <td><span lang="ar">عشان تتذكر نوع الأسئلة اللي تفضلونه</span><span lang="en">To remember which questions you prefer</span></td>
+            <td><span class="tag dev"><span lang="ar">جهازك فقط</span><span lang="en">Device only</span></span></td></tr>
+        <tr><td><span lang="ar">اللغة والإعدادات</span><span lang="en">Language & settings</span></td>
+            <td><span lang="ar">اللغة، عرض الترجمة، وترتيب الأدوار</span><span lang="en">Language, translation display, turn order</span></td>
+            <td><span class="tag dev"><span lang="ar">جهازك فقط</span><span lang="en">Device only</span></span></td></tr>
+      </tbody>
+    </table>
+    <p lang="ar">ما نشوف هذي البيانات ولا تنرسل لنا أو لغيرنا. ولا ننصح تكتب أسماء كاملة، الاسم الأول أو اللقب يكفي.</p>
+    <p lang="en">We never see this data and it is never sent to us or anyone else. First names or nicknames are all you need.</p>
+  </section>
+
+  <section class="s" id="never">
+    <h2 class="h"><span class="num">2</span><span lang="ar">وش ما نجمعه أبدًا</span><span lang="en">What we never collect</span></h2>
+    <ul class="clean" lang="ar">
+      <li>معلومات شخصية: اسم، إيميل، رقم جوال، عمر، أو جنس</li>
+      <li>موقعك الجغرافي</li>
+      <li>إجاباتكم أو أي شيء يُقال أثناء اللعب، فالتطبيق ما يسجّل صوت ولا نص</li>
+      <li>سجل اللعب، أو أي كروت ظهرت لكم</li>
+      <li>معرّفات الجهاز أو المعرّفات الإعلانية (IDFA / AAID)</li>
+      <li>تقارير الأعطال أو بيانات الاستخدام والتحليلات</li>
+    </ul>
+    <ul class="clean" lang="en">
+      <li>Personal information: name, email, phone number, age or gender</li>
+      <li>Your location</li>
+      <li>Your answers or anything said while playing. The app records no audio or text.</li>
+      <li>Game history or which cards you were shown</li>
+      <li>Device identifiers or advertising IDs (IDFA / AAID)</li>
+      <li>Crash reports, usage data or analytics</li>
+    </ul>
+  </section>
+
+  <section class="s" id="perms">
+    <h2 class="h"><span class="num">3</span><span lang="ar">أذونات الجهاز</span><span lang="en">Device permissions</span></h2>
+    <table>
+      <thead><tr>
+        <th><span lang="ar">الإذن</span><span lang="en">Permission</span></th>
+        <th><span lang="ar">مطلوب؟</span><span lang="en">Requested?</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span lang="ar">الإنترنت</span><span lang="en">Internet</span></td><td><span class="tag dev"><span lang="ar">للشراء من المتجر فقط</span><span lang="en">Store purchases only</span></span></td></tr>
+        <tr><td><span lang="ar">الموقع</span><span lang="en">Location</span></td><td><span class="tag no"><span lang="ar">لا</span><span lang="en">No</span></span></td></tr>
+        <tr><td><span lang="ar">الكاميرا والصور</span><span lang="en">Camera & photos</span></td><td><span class="tag no"><span lang="ar">لا</span><span lang="en">No</span></span></td></tr>
+        <tr><td><span lang="ar">المايكروفون</span><span lang="en">Microphone</span></td><td><span class="tag no"><span lang="ar">لا</span><span lang="en">No</span></span></td></tr>
+        <tr><td><span lang="ar">جهات الاتصال</span><span lang="en">Contacts</span></td><td><span class="tag no"><span lang="ar">لا</span><span lang="en">No</span></span></td></tr>
+        <tr><td><span lang="ar">الإشعارات</span><span lang="en">Notifications</span></td><td><span class="tag no"><span lang="ar">لا</span><span lang="en">No</span></span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="s" id="third">
+    <h2 class="h"><span class="num">4</span><span lang="ar">الأطراف الثالثة</span><span lang="en">Third parties</span></h2>
+    <p lang="ar">التطبيق ما يحتوي على أي خدمات طرف ثالث تجمع بيانات: لا إعلانات، ولا تحليلات، ولا تسجيل دخول عن طريق قوقل أو أبل أو غيرهم، ولا روابط تتبّع. وما نبيع ولا نشارك ولا نأجّر أي بيانات، لأنه ما عندنا بيانات أصلًا. الطرف الوحيد هو متجر أبل أو قوقل وقت الشراء، حسب سياساتهم.</p>
+    <p lang="en">The app contains no third-party services that collect data: no ads, no analytics, no sign-in with Google, Apple or anyone else, and no tracking links. We don't sell, share or rent any data, because we don't have any. The only other party is Apple's or Google's store when you make a purchase, under their own policies.</p>
+  </section>
+
+  <section class="s" id="purchases">
+    <h2 class="h"><span class="num">5</span><span lang="ar">المشتريات داخل التطبيق</span><span lang="en">In-app purchases</span></h2>
+    <p lang="ar">«الباقات الخاصة» شراء لمرة وحدة يتم بالكامل عن طريق App Store أو Google Play. أبل أو قوقل يتعاملون مع الدفع، ونحن ما نستلم ولا نشوف رقم بطاقتك ولا اسمك ولا أي بيانات دفع. التطبيق يعرف بس إذا الباقات مفتوحة ولا لا، ويحفظ هذي المعلومة في جهازك.</p>
+    <p lang="en">The "Private packs" are a one-time purchase handled entirely by the App Store or Google Play. Apple or Google process the payment; we never receive or see your card number, name or any payment details. The app only learns whether the packs are unlocked, and stores that on your device.</p>
+  </section>
+
+  <section class="s" id="stores">
+    <h2 class="h"><span class="num">6</span><span lang="ar">متاجر التطبيقات</span><span lang="en">App stores</span></h2>
+    <p lang="ar">لما تحمّل التطبيق من App Store أو Google Play، ممكن أبل أو قوقل يجمعون معلومات عن التحميل حسب سياسات الخصوصية الخاصة فيهم. هذا خارج تحكّمنا، ونستلم منهم إحصائيات عامة مجمّعة فقط، مثل عدد التحميلات، وما تحدد هويتك.</p>
+    <p lang="en">When you download the app from the App Store or Google Play, Apple or Google may collect information about the download under their own privacy policies. That is outside our control. We only receive aggregated, anonymous statistics from them, such as download counts, which do not identify you.</p>
+  </section>
+
+  <section class="s" id="kids">
+    <h2 class="h"><span class="num">7</span><span lang="ar">الأطفال</span><span lang="en">Children</span></h2>
+    <p lang="ar">«على الطاولة» لعبة جمعات موجّهة لعمر ١٣ سنة وفوق، وفيها «وضع العائلة» لما تلعبون مع الصغار. وبما إن التطبيق ما يجمع أي بيانات، ما نجمع بيانات أي طفل بأي شكل.</p>
+    <p lang="en">Ala AlTawla is a party game intended for ages 13 and up, with a Family mode for playing alongside younger relatives. Because the app collects no data, we do not knowingly or otherwise collect any data from children.</p>
+  </section>
+
+  <section class="s" id="control">
+    <h2 class="h"><span class="num">8</span><span lang="ar">تحكّمك في بياناتك</span><span lang="en">Your control & rights</span></h2>
+    <ul class="clean" lang="ar">
+      <li><b>تعديل أو حذف لاعب:</b> اضغط على اسمه في الصفحة الرئيسية.</li>
+      <li><b>حذف كل البيانات:</b> احذف التطبيق، أو امسح بياناته من إعدادات الجهاز.</li>
+      <li><b>حقوقك النظامية:</b> نحترم نظام حماية البيانات الشخصية في المملكة العربية السعودية والأنظمة المشابهة. وبما إننا ما نحتفظ بأي بيانات عنك، كل بياناتك تحت تحكّمك الكامل في جهازك.</li>
+    </ul>
+    <ul class="clean" lang="en">
+      <li><b>Edit or remove a player:</b> tap their name on the home screen.</li>
+      <li><b>Delete everything:</b> uninstall the app, or clear its data in your device settings.</li>
+      <li><b>Your legal rights:</b> we respect Saudi Arabia's Personal Data Protection Law (PDPL), the GDPR and similar laws. Because we hold no data about you, all of your data stays fully under your control on your device.</li>
+    </ul>
+  </section>
+
+  <section class="s" id="security">
+    <h2 class="h"><span class="num">9</span><span lang="ar">الأمان</span><span lang="en">Security</span></h2>
+    <p lang="ar">أفضل حماية للبيانات إنها ما تطلع من جهازك أصلًا. بياناتكم محمية بنفس حماية جهازك، مثل قفل الشاشة والتشفير المدمج في النظام.</p>
+    <p lang="en">The best protection for your data is that it never leaves your device. Your data has the same protection as your phone: its screen lock and the operating system's built-in encryption.</p>
+    <div class="note">
+      <span lang="ar">💡 تذكير: اللي يُقال على الطاولة مسؤولية الجمعة. احترموا خصوصية بعض، ولا أحد يصوّر أو ينشر بدون إذن.</span>
+      <span lang="en">💡 A reminder: what's said at the table is the group's responsibility. Respect each other's privacy, and don't film or post anyone without their permission.</span>
+    </div>
+  </section>
+
+  <section class="s" id="changes">
+    <h2 class="h"><span class="num">10</span><span lang="ar">التعديلات على السياسة</span><span lang="en">Changes to this policy</span></h2>
+    <p lang="ar">لو أضفنا ميزة تغيّر طريقة تعاملنا مع البيانات، بنحدّث هذي الصفحة وتاريخ «آخر تحديث» قبل ما توصلكم الميزة، وبنوضّح التغيير داخل التطبيق.</p>
+    <p lang="en">If we ever add a feature that changes how data is handled, we will update this page and its "Last updated" date before the feature reaches you, and explain the change inside the app.</p>
+  </section>
+
+  <section class="s" id="contact">
+    <h2 class="h"><span class="num">11</span><span lang="ar">تواصل معنا</span><span lang="en">Contact us</span></h2>
+    <div class="contact">
+      <p><span lang="ar">عندك سؤال أو ملاحظة؟ يسعدنا نسمع منك.</span><span lang="en">Questions or feedback? We'd love to hear from you.</span></p>
+      <a href="mailto:alaaltawla.app@gmail.com">alaaltawla.app@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span lang="ar">© ٢٠٢٦ على الطاولة · صُنع بحب في السعودية</span>
+  <span lang="en">© 2026 Ala AlTawla · Made with love in Saudi Arabia</span>
+</footer>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.toggle button');
+    function setLang(lang) {
+      document.body.className = lang;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.title = lang === 'ar' ? 'على الطاولة · سياسة الخصوصية' : 'Ala AlTawla · Privacy Policy';
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    var fromUrl = new URLSearchParams(location.search).get('lang');
+    setLang(fromUrl === 'en' || fromUrl === 'ar' ? fromUrl : (saved || 'ar'));
+  })();
+</script>
+</body>
+</html>
